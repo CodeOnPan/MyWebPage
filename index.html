@@ -12,36 +12,66 @@
         <title>Michał.</title>
     </head>
     <body>
-    <main>
-        <section class="header"> 
+        <nav class="header"> 
             <!--Panel nawigacyjny  -->
-            <i class="fa-solid fa-globe"></i>
-            <p class="logo"><b>Michał.</b></p>
-            <ul class="navi">
-                <li>Home</li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>
-        </section>
-        <section class="hero"> 
-            <!-- Zdjecie po prawiej + Tekst i przycisk -->
+            <div class="logo">
+                <i class="fa-solid fa-globe"></i>
+                <h4><b>Michał.</b></h4>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-bar">
+                <ul class="nav-menu">
+                    <li><a href="#" class=".nav-link">Home</a></li>
+                    <li><a href="#" class=".nav-link">About</a></li>
+                    <li><a href="#" class=".nav-link">Projects</a></li>
+                    <li><a href="#" class=".nav-link">Contact</a></li>
+                </ul>
+                <div class="linkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="gitHub">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+        </nav>
+        <!-- Javascript for click events-->
+         <script>
+           const hamburger = document.querySelector(".hamburger");
+           const navBar = document.querySelector(".nav-bar");
+           hamburger.addEventLisner("click", ()=>
+           {
+            hambuger.classList.toggle("active");
+            navBar.classList.toggle("active");
+           });
+           document.querySelectorAll(".nav-link").forEach(
+            (n)=> n.addEventLisner("click", ()=>{
+                hamburger.classList.remove("active");
+                navBar.classList.remove("active");
+            }));
 
-        </section>
-        <section class="aboutMe">
-            <!-- O mnie po lewej, technologie po prawiej + zbior ikon odnosnie technologii -->
-        </section>
-        <section class="projects">
-            <!-- h1 projects na srodku a pod nim karty z projektami -->
-        </section>
-        <section class="contact">
-            <!-- Napis + pole z mailem i tel + przycisk do cv -->
 
-        </section>
-    </main>
-
-
+         </script>
+        <main>
+            <div class="hero"> 
+                <!-- Zdjecie po prawiej + Tekst i przycisk -->
+                <p>Hero</p>
+            </div>
+            <div class="aboutMe">
+                <!-- O mnie po lewej, technologie po prawiej + zbior ikon odnosnie technologii -->
+                <p>AboutMe</p>
+            </div>
+            <div class="projects">
+                <!-- h1 projects na srodku a pod nim karty z projektami -->
+                <p>Projects</p>
+            </div>
+            <div class="contact">
+                <!-- Napis + pole z mailem i tel + przycisk do cv -->
+                <p>Contact</p>
+            </div>
+        </main>
     </body>
 </html>
