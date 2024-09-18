@@ -1,77 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/c753150fab.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c753150fab.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <title>Michał.</title>
-    </head>
-    <body>
-        <nav class="header"> 
-            <!--Panel nawigacyjny  -->
-            <div class="logo">
-                <i class="fa-solid fa-globe"></i>
-                <h4><b>Michał.</b></h4>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="nav-bar">
-                <ul class="nav-menu">
-                    <li><a href="#" class=".nav-link">Home</a></li>
-                    <li><a href="#" class=".nav-link">About</a></li>
-                    <li><a href="#" class=".nav-link">Projects</a></li>
-                    <li><a href="#" class=".nav-link">Contact</a></li>
-                </ul>
-                <div class="linkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
-                </div>
-                <div class="gitHub">
-                    <i class="fa-brands fa-github"></i>
-                </div>
-            </div>
-        </nav>
-        <!-- Javascript for click events-->
-         <script>
-           const hamburger = document.querySelector(".hamburger");
-           const navBar = document.querySelector(".nav-bar");
-           hamburger.addEventLisner("click", ()=>
-           {
-            hambuger.classList.toggle("active");
-            navBar.classList.toggle("active");
-           });
-           document.querySelectorAll(".nav-link").forEach(
-            (n)=> n.addEventLisner("click", ()=>{
-                hamburger.classList.remove("active");
-                navBar.classList.remove("active");
-            }));
-
-
-         </script>
-        <main>
-            <div class="hero"> 
-                <!-- Zdjecie po prawiej + Tekst i przycisk -->
-                <p>Hero</p>
-            </div>
-            <div class="aboutMe">
-                <!-- O mnie po lewej, technologie po prawiej + zbior ikon odnosnie technologii -->
-                <p>AboutMe</p>
-            </div>
-            <div class="projects">
-                <!-- h1 projects na srodku a pod nim karty z projektami -->
-                <p>Projects</p>
-            </div>
-            <div class="contact">
-                <!-- Napis + pole z mailem i tel + przycisk do cv -->
-                <p>Contact</p>
-            </div>
-        </main>
-    </body>
+    <title>Michał.</title>
+  </head>
+  <body>
+    <nav class="header">
+      <!--Panel nawigacyjny  -->
+      <div class="logo">
+        <i class="fa-solid fa-globe"></i>
+        <h4><b>Michał.</b></h4>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-bar">
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Projects</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="linkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="gitHub">
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- Javascript for click events-->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navBar = document.querySelector(".nav-bar");
+      const header = document.querySelector(".header");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navBar.classList.toggle("active");
+        header.classList.toggle("active");
+      });
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navBar.classList.remove("active");
+          header.classList.remove("active");
+        })
+      );
+      const linkedIn = document.querySelector(".linkedIn");
+      const gitHub = document.querySelector(".gitHub");
+      linkedIn.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navBar.classList.remove("active");
+        header.classList.remove("active");
+      });
+      gitHub.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navBar.classList.remove("active");
+        header.classList.remove("active");
+      });
+    </script>
+    <main>
+      <div class="hero">
+        <!-- Zdjecie po prawiej + Tekst i przycisk -->
+        <p>Hero</p>
+      </div>
+      <div class="photo">
+        <p>photo</p>
+      </div>
+      <div class="aboutMe">
+        <!-- O mnie po lewej, technologie po prawiej + zbior ikon odnosnie technologii -->
+        <p>AboutMe</p>
+      </div>
+      <div class="technologies">
+        <p>technologies</p>
+      </div>
+      <div class="projects">
+        <!-- h1 projects na srodku a pod nim karty z projektami -->
+        <p>Projects</p>
+      </div>
+      <div class="contact">
+        <!-- Napis + pole z mailem i tel + przycisk do cv -->
+        <p>Contact</p>
+      </div>
+    </main>
+  </body>
 </html>
