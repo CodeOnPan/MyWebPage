@@ -2,6 +2,7 @@
   --ff: "DM Sans", sans-serif;
   --colorprimary: #fefae0;
   --colorsecondary: #606c38;
+  --textColorPrimary:#283618;
   ---coloraccent: #dda15e;
   --h1: bold 96px var(--ff);
   --h2: bold 64px var(--ff);
@@ -51,7 +52,7 @@ body {
   padding: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 1fr 32fr;
   grid-template-areas:
     'navbar navbar'
     'main main';
@@ -78,8 +79,8 @@ main{
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
-
   border-radius: 24px;
+  z-index: 1;
 }
 .nav-bar {
   display: flex;
@@ -154,6 +155,10 @@ a:hover {
 /* Hero section */
 .hero{
   grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--textColorPrimary)
 }
 
 .photo{
@@ -166,7 +171,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   
   clip-path: circle();
@@ -179,7 +184,14 @@ a:hover {
   max-width: 98%;
   height: auto;
   clip-path: circle();
-  
+}
+.contactButton{
+  height: 72px;
+  width: 292px;
+  background-color: var(--colorsecondary);
+  color: var(--colorprimary);
+  border: 0px;
+  border-radius: 20px;
 }
 
 
