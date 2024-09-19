@@ -51,7 +51,7 @@ body {
   padding: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 8fr;
   grid-template-areas:
     'navbar navbar'
     'main main';
@@ -155,9 +155,35 @@ a:hover {
 .hero{
   grid-area: hero;
 }
+
 .photo{
   grid-area: photo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.borderProfile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  
+  clip-path: circle();
+  background-color: var(--colorsecondary);
+}
+.profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 98%;
+  height: auto;
+  clip-path: circle();
+  
+}
+
+
+
 
 /* main section */
 .aboutMe{
