@@ -35,6 +35,7 @@ h1 {
 }
 h2 {
   font: var(--h2);
+  font-size: clamp(2rem, 1.296rem + 3.005vw, 4rem);
 }
 h3 {
   font: var(--h3);
@@ -56,7 +57,6 @@ li {
 
 body {
   background-color: var(--colorprimary);
-  padding: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 32fr;
@@ -68,7 +68,7 @@ main{
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
   grid-template-areas:
     'hero photo'
     'aboutMe technologies'
@@ -77,8 +77,13 @@ main{
 }
 /* Navigation bar */
 
-.header {
+.borderNav{
   grid-area: navbar;
+  padding: 12px;
+}
+
+.header {
+  
   height: 88px;
   background-color: var(--colorsecondary);
   color: var(--colorprimary);
@@ -161,6 +166,7 @@ a:hover {
 
 /* Hero section */
 .hero{
+  padding: 12px;
   grid-area: hero;
   display: flex;
   flex-direction: column;
@@ -170,6 +176,7 @@ a:hover {
 }
 
 .photo{
+  padding: 12px;
   grid-area: photo;
   display: flex;
   align-items: center;
@@ -217,9 +224,52 @@ a:hover {
 /* main section */
 .aboutMe{
   grid-area: aboutMe;
+  padding: 12px;
+  background-color: var(--colorsecondary);
+  color: var(--colorprimary);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
 }
 .technologies{
   grid-area: technologies;
+  padding: 12px;
+  background-color: var(--colorsecondary);
+  color: var(--colorprimary);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.skillContainer{
+  background-color: var(--colorprimary);
+  padding: 5px;
+  border: 5px solid var(--textColorPrimary);
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  
+  
+}
+.fa-html5, .fa-css3-alt, .fa-js, .fa-figma, .fa-git-alt{
+  font-size: clamp(1rem, -0.056rem + 4.507vw, 4rem);
+}
+.fa-html5{
+  color: #e34c26;
+}
+.fa-css3-alt{
+  color: #264de4;
+}
+.fa-js{
+  color: #f0db4f;
+}
+.fa-figma{
+  background: -webkit-linear-gradient(270deg, rgba(222,35,31,1) 0%, rgba(236,65,136,1) 17%, rgba(44,62,205,1) 44%, rgba(181,29,253,1) 63%, rgba(44,176,30,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-git-alt{
+  color: #f34f29;
 }
 
 .projects{

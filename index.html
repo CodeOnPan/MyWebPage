@@ -18,32 +18,34 @@
     <title>Michał.</title>
   </head>
   <body>
-    <nav class="header">
-      <!--Panel nawigacyjny  -->
-      <div class="logo">
-        <i class="fa-solid fa-globe"></i>
-        <h4><b>Michał.</b></h4>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <div class="nav-bar">
-        <ul class="nav-menu">
-          <li><a href="#" class="nav-link">Home</a></li>
-          <li><a href="#" class="nav-link">About</a></li>
-          <li><a href="#" class="nav-link">Projects</a></li>
-          <li><a href="#" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="linkedIn">
-          <i class="fa-brands fa-linkedin"></i>
+    <div class="borderNav">
+      <nav class="header">
+        <!--Panel nawigacyjny  -->
+        <div class="logo">
+          <i class="fa-solid fa-globe"></i>
+          <h4><b>Michał.</b></h4>
         </div>
-        <div class="gitHub">
-          <i class="fa-brands fa-github"></i>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </div>
-    </nav>
+        <div class="nav-bar">
+          <ul class="nav-menu">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="#" class="nav-link">Projects</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="linkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+          <div class="gitHub">
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
     <!-- Javascript for click events-->
     <script>
       const hamburger = document.querySelector(".hamburger");
@@ -83,7 +85,6 @@
           I would be pleased if you take a look at my portfolio.
         </p>
         <button class="contactButton"><h4>CONTACT ME</h4><i class="fa-solid fa-envelope"></i></button>
-          
       </div>
       <div class="photo">
         <div class="borderProfile">
@@ -92,10 +93,25 @@
       </div>
       <div class="aboutMe">
         <!-- O mnie po lewej, technologie po prawiej + zbior ikon odnosnie technologii -->
-        <p>AboutMe</p>
+        <h2>About me</h2>
+        <p>
+          My education is M.Sc. Engineer in Power engineering and I worked in the industry for 1 year and 8 months, 
+         at the end of 2023 I decided that I had to change the current energy industry to another one and I chose IT.
+          It was natural for me because I had already worked during my studies for 2 years as an "IT support".
+          I enjoyed that job, but I had to give it up to finish my full-time studies and write my engineering thesis.
+          Having basic knowledge, I decided it was time to learn something new and more complicated. To sum up, on this page I will present my learned skills.
+        </p>
       </div>
       <div class="technologies">
-        <p>technologies</p>
+        <h2>Technologies</h2>
+        <p>During my learning, I managed to learn the following tools at a basic level.</p>
+        <div class="skillContainer">
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+          <i class="fa-brands fa-js"></i>
+          <i class="fa-brands fa-figma"></i>
+          <i class="fa-brands fa-git-alt"></i>
+        </div>
       </div>
       <div class="projects">
         <!-- h1 projects na srodku a pod nim karty z projektami -->
