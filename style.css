@@ -30,18 +30,25 @@ li,
 
 h1 {
   font: var(--h1);
+  font-size: clamp(2rem, 0.944rem + 4.507vw, 5rem);
+  
 }
 h2 {
   font: var(--h2);
 }
 h3 {
   font: var(--h3);
+  font-size: clamp(1rem, 0.296rem + 3.005vw, 3rem);
+  
 }
 h4 {
   font: var(--h4);
+  font-size: clamp(0.75rem, -0.042rem + 3.38vw, 3rem);
 }
 p {
   font: var(--p);
+  font-size: clamp(0.75rem, 0.486rem + 1.127vw, 1.5rem);
+  
 }
 li {
   font: var(--li);
@@ -128,7 +135,7 @@ a:hover {
 }
 
 .fa-globe {
-  font-size: 28px;
+  font-size: clamp(1rem, -0.056rem + 4.507vw, 3rem);
   margin-right: 8px;
 }
 
@@ -187,12 +194,21 @@ a:hover {
   clip-path: circle();
 }
 .contactButton{
-  height: 72px;
-  width: 292px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(8.75rem, 5.405rem + 22.272vw, 26rem);
+  gap: clamp(1rem, 0.648rem + 1.502vw, 2rem);
   background-color: var(--colorsecondary);
   color: var(--colorprimary);
   border: 0px;
+  padding: 1rem;
   border-radius: 20px;
+  font-weight: bold;
+}
+.fa-envelope{
+  font-size: clamp(1rem, -0.056rem + 4.507vw, 4rem);
 }
 
 
@@ -217,7 +233,7 @@ a:hover {
 
 
 /* Rozdzielczość dla mobilki */
-@media (max-width: 840px) {
+@media (max-width: 960px) {
   .hamburger {
     display: block;
     padding: 0px 16px;
