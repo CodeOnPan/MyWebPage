@@ -6,7 +6,7 @@
   ---coloraccent: #dda15e;
   --h1: bold 96px var(--ff);
   --h2: bold 64px var(--ff);
-  --h3: bold 40px var(--ff);
+  --h3: normal 40px var(--ff);
   --h4: normal 32px var(--ff);
   --h5: bold 28px var(--ff);
   --p: normal 24px var(--ff);
@@ -48,7 +48,8 @@ h4 {
   font-size: clamp(0.75rem, -0.042rem + 3.38vw, 3rem);
 }
 h5{
-  font: var(--h5)
+  font: var(--h5);
+  font-size: clamp(1rem, 0.736rem + 1.127vw, 1.75rem);
   
 }
 p {
@@ -271,7 +272,7 @@ a:hover {
 
 .projects{
   grid-area: projects;
-  padding: 12px;
+  padding: 12px 12px 36px 12px;
   background-color: var(--colorsecondary);
   display: grid;
   color: var(--colorprimary);
@@ -302,41 +303,97 @@ a:hover {
   background-color: var(--colorprimary);
   border: 4px solid var(--textColorPrimary);
   border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   
 }
 .photo1p{
   display: flex;
   align-items: center;
   grid-area: photo1;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
   border-radius: 24px 24px 0 0;
   border-bottom: 4px solid var(--textColorPrimary);
 }
 .text1p{
   display: flex;
   flex-direction: column;
-  padding: 8px;
-  gap: 20px;
   grid-area: text1;
   color: var(--textColorPrimary);
+  padding: 12px;
 }
 .link1p{
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--textColorPrimary);
 }
 .container2p{
   grid-area: container2;
   background-color: var(--colorprimary);
   border: 4px solid var(--textColorPrimary);
   border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   
+}
+.photo2p{
+  display: flex;
+  align-items: center;
+  grid-area: photo1;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px 24px 0 0;
+  border-bottom: 4px solid var(--textColorPrimary);
+}
+.text2p{
+  display: flex;
+  flex-direction: column;
+  grid-area: text1;
+  color: var(--textColorPrimary);
+  padding: 12px;
+}
+.link2p{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--textColorPrimary);
 }
 .container3p{
   grid-area: container3;
   background-color: var(--colorprimary);
   border: 4px solid var(--textColorPrimary);
   border-radius: 24px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.photo3p{
+  display: flex;
+  align-items: center;
+  grid-area: photo1;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px 24px 0 0;
+  border-bottom: 4px solid var(--textColorPrimary);
+}
+.text3p{
+  display: flex;
+  flex-direction: column;
+  grid-area: text1;
+  color: var(--textColorPrimary);
+}
+.link3p{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--textColorPrimary);
 }
 
 
