@@ -30,50 +30,19 @@
         </div>
         <div class="nav-bar">
           <ul class="nav-menu">
-            <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">About</a></li>
-            <li><a href="#" class="nav-link">Projects</a></li>
-            <li><a href="#" class="nav-link">Contact</a></li>
+            <li><a href="#aboutId" class="nav-link">About</a></li>
+            <li><a href="#projectsId" class="nav-link">Projects</a></li>
+            <li><a href="#contactId" class="nav-link">Contact</a></li>
           </ul>
-          <div class="linkedIn">
+          <a href="https://www.linkedin.com/in/huziormichal/" class="linkedIn">
             <i class="fa-brands fa-linkedin"></i>
-          </div>
-          <div class="gitHub">
+          </a>
+          <a href="https://github.com/CodeOnPan" class="gitHub">
             <i class="fa-brands fa-github"></i>
-          </div>
+          </a>
         </div>
       </nav>
     </div>
-    <!-- Javascript for click events-->
-    <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navBar = document.querySelector(".nav-bar");
-      const header = document.querySelector(".header");
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navBar.classList.toggle("active");
-        header.classList.toggle("active");
-      });
-      document.querySelectorAll(".nav-link").forEach((n) =>
-        n.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navBar.classList.remove("active");
-          header.classList.remove("active");
-        })
-      );
-      const linkedIn = document.querySelector(".linkedIn");
-      const gitHub = document.querySelector(".gitHub");
-      linkedIn.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navBar.classList.remove("active");
-        header.classList.remove("active");
-      });
-      gitHub.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navBar.classList.remove("active");
-        header.classList.remove("active");
-      });
-    </script>
     <main>
       <div class="hero">
         <h3>Hello I'm</h3>
@@ -81,16 +50,18 @@
         <p>Welcome on my website, I have been learning web development since January 2024 and 
           I would be pleased if you take a look at my portfolio.
         </p>
-        <button class="contactButton">
-          <h4>CONTACT ME</h4><i class="fa-solid fa-envelope"></i>
-        </button>
+        <a href="#contactId">
+          <button class="contactButton">
+            <h4>CONTACT ME</h4><i class="fa-solid fa-envelope"></i>
+          </button>
+        </a>
       </div>
       <div class="photo">
         <div class="borderProfile">
           <img class="profile" src="/Content/Profile.jpg"/>
         </div>
       </div>
-      <div class="aboutMe">
+      <div class="aboutMe" id="aboutId">
         <h2>About me</h2>
         <p>
           My education is M.Sc. Engineer in Power engineering and I worked in the industry for 1 year and 8 months, 
@@ -111,54 +82,57 @@
           <i class="fa-brands fa-git-alt"></i>
         </div>
       </div>
-      <div class="projects">
+      <div class="projects" id="projectsId">
         <h2 class="topic">Projects</h2>
         <div class="allContainers">
-          <div class="container1p">
-            <img class="photo1p" src="Content/image-omelette.jpeg"/>
-            <div class="text1p">
-              <h5>Recipe page</h5>
-              <p>My solution to the Recipe page challenge on Frontend Mentor</p>
-            </div>
-            <div class="link1p">
-              <i class="fa-solid fa-link"></i>
-              <p>Link to github</p>
-            </div>
-          </div>
-          <div class="container2p">
-            <img class="photo2p" src="Content/myWebScreen.png"/>
-            <div class="text2p">
-              <h5>My web page</h5>
-              <p>My changelog on the personal page</p>
-            </div>
-            <div class="link2p">
-              <i class="fa-solid fa-link"></i>
-              <p>Link to github</p>
-            </div>
-          </div>
-          <div class="container3p">
-            <img class="photo3p" src="Content/service_works.jpg"/>
-            <div class="text3p">
-              <h5>Coming soon!</h5>
-            </div>
-            <div class="link3p">
-              <i class="fa-solid fa-link"></i>
-              <p>Link to github</p>
-            </div>
-          </div>
+          <a href="https://github.com/CodeOnPan/Recipe-page" class="container1p">
+              <img class="photo1p" src="Content/image-omelette.jpeg"/>
+              <div class="text1p">
+                <h5>Recipe page</h5>
+                <p>My solution to the Recipe page challenge on Frontend Mentor</p>
+              </div>
+              <div class="link1p">
+                <i class="fa-solid fa-link"></i>
+                <p>Link to github</p>
+              </div>
+          </a>
+          <a href="https://github.com/CodeOnPan/MyWebPage" class="container2p">
+              <img class="photo2p" src="Content/myWebScreen.png"/>
+              <div class="text2p">
+                <h5>My web page</h5>
+                <p>My changelog on the personal page</p>
+              </div>
+              <div class="link2p">
+                <i class="fa-solid fa-link"></i>
+                <p>Link to github</p>
+              </div>
+          </a>
+          <a href="https://github.com/CodeOnPan?tab=repositories" class="container3p">
+              <img class="photo3p" src="Content/service_works.jpg"/>
+              <div class="text3p">
+                <h5>Coming soon!</h5>
+              </div>
+              <div class="link3p">
+                <i class="fa-solid fa-link"></i>
+                <p>Link to github</p>
+              </div>
+          </a>
         </div>
       </div>
-      <div class="contact">
+      <div class="contact" id="contactId">
         <h3>Get in touch</h3>
         <h2>Contact me</h2>
         <div class="contactContainer">
           <i class="fa-solid fa-envelope"></i>
-          <p>michal.huzior96@gmail.com</p>
+          <a href="mailto:michal.huzior96@gmail.com"><p>michal.huzior96@gmail.com</p></a>
           <i class="fa-solid fa-phone"></i>
-          <p>+48 602 817 527</p>
+          <a href="tel:+48 602 817 527"><p>+48 602 817 527</p></a>
         </div>
-        <button class="download"><p>Download CV</p></button>
+        <a href="Content/CV.pdf" download>
+          <button class="download"><p>Download CV</p></button>
+        </a>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
